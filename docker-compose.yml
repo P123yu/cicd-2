@@ -12,7 +12,8 @@ services:
       POSTGRES_DB: docker-postgres
 
   postgres_spring:
-    image: piyush12singh/spring-postgres-docker-image-new12:01
+    build: .
+    image: piyush12singh/spring-postgres-docker-image-new12:latest  # Specify your Docker Hub repo/tag
     container_name: postgres_spring
     networks:
       - spring-postgres-net
